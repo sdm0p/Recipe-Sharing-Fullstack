@@ -1,0 +1,16 @@
+<div>
+  <div class="min-h-[92.5vh]">
+   @if(user) {
+    <app-navbar/>
+  }
+    @if(user) {
+    <app-home-page />
+    } @else {
+    <app-auth />
+    }
+  </div>
+
+  <div>
+    <app-footer/>
+  </div>
+</div>

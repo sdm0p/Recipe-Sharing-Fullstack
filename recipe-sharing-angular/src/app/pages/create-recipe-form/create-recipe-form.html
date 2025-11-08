@@ -1,0 +1,65 @@
+<form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md bg-slate-600">
+  <div class="flex justify-end">
+    <button mat-icon-button (click)="onNoClick()" aria-label="Close">
+      <mat-icon class="text-white">close</mat-icon>
+    </button>
+  </div>
+
+
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-gray-800">title</mat-label>
+      <input
+        matInput
+        placeholder="...."
+        value=""
+        [(ngModel)]="recipeItem.title"
+        name="title"
+        class="py-2 px-3 text-gray-600 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-gray-800">description</mat-label>
+      <input
+        matInput
+        placeholder="...."
+        value=""
+        [(ngModel)]="recipeItem.description"
+        name="description"
+        class="py-2 px-3 text-gray-600 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <div class="mb-4">
+    <mat-radio-group
+      name="foodType"
+      [(ngModel)]="recipeItem.foodType"
+      aria-label="Select an option"
+    >
+      <mat-radio-button value="veg"><p class="text-cyan-50">vegetarian</p></mat-radio-button>
+      <mat-radio-button value="non-veg"
+        ><p class="text-cyan-50">Non-Vegetarian</p></mat-radio-button
+      >
+    </mat-radio-group>
+  </div>
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-gray-800">image</mat-label>
+      <input
+        matInput
+        placeholder="...."
+        value=""
+        [(ngModel)]="recipeItem.image"
+        name="image"
+        class="py-2 px-3 text-gray-600 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button type="submit">Submit</button>
+    </div>
+  </section>
+</form>
